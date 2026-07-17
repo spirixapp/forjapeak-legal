@@ -89,11 +89,34 @@
   <p>Si usas la generación de planes de entrenamiento o nutrición con IA, la app envía la información de tu onboarding (objetivo, nivel, preferencias y perfil físico) a través de <strong>nuestro propio servidor</strong> a la API de Anthropic (Claude), que es quien genera el plan. La clave de acceso a esa API es nuestra; tú no tienes que aportar ninguna. Ese tratamiento está sujeto además a la <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">política de privacidad de Anthropic</a>. No enviamos a la IA tus fotos, vídeos ni datos de contacto, y aplicamos un límite de uso por persona y día.</p>
 
   <h2>6. Datos técnicos y de uso (errores y analítica)</h2>
-  <p>Para detectar fallos y entender qué funciones se usan de verdad, ForjaPeak utiliza:</p>
+
+  <p><strong>La analítica está apagada hasta que tú digas que sí.</strong> La primera vez que abres la app te preguntamos si nos dejas ver cómo la usas, con las dos respuestas igual de a mano. Si dices que no, no se envía nada y la app funciona exactamente igual. Puedes cambiar de idea cuando quieras en <em>Progreso → Configuración → Privacidad</em>. Aceptar los Términos de Uso no cuenta como decir que sí a esto: son cosas distintas y se preguntan por separado.</p>
+
+  <p>Si nos das permiso, esto es <strong>todo</strong> lo que se registra, sin excepciones:</p>
+  <ul>
+    <li>Que has abierto el onboarding, por qué paso vas y que lo has terminado, con el área que elegiste forjar y <em>cuántos</em> hábitos escogiste (el número, nunca cuáles).</li>
+    <li>Que has creado o marcado un hábito, con su tipo, frecuencia y categoría. El nombre solo viaja si es uno de los de nuestro catálogo y no pertenece a Adicciones.</li>
+    <li>Qué logro has desbloqueado.</li>
+    <li>Que has generado o regenerado un plan de gimnasio o de nutrición, con tu objetivo, los días que entrenas y el tipo de dieta. Y si esa generación falló, para poder arreglarlo.</li>
+    <li>El nombre de la pantalla en la que estás (por ejemplo, "GymScreen").</li>
+  </ul>
+
+  <p>Y esto es lo que <strong>nunca sale de tu móvil</strong>, ni aunque nos des permiso:</p>
+  <ul>
+    <li><strong>Lo que escribes tú.</strong> Los hábitos que creas a mano, tus notas y tu diario. Del catálogo solo enviamos nuestro propio vocabulario ("Meditación", "Leer"); de lo tuyo, como mucho, que existe.</li>
+    <li><strong>Tus hábitos de la categoría Adicciones.</strong> Ni cuáles son ni cuántos tienes. Son datos de salud y quedan fuera por completo.</li>
+    <li><strong>Tu nombre, tu correo, tus fotos y tus datos corporales.</strong></li>
+    <li><strong>Grabaciones de pantalla.</strong> No existen, ni de lo que tocas ni de lo que ves.</li>
+  </ul>
+
+  <p>Si has iniciado sesión, esos eventos quedan asociados al identificador interno de tu cuenta, nunca a tu correo ni a tu nombre. Lo hacemos para saber si la gente sigue usando la app pasada la primera semana. <strong>No es analítica anónima</strong>, y preferimos decírtelo claro: es seudonimizada, que en la práctica significa que nosotros no vemos quién eres pero los datos siguen apuntando a una cuenta concreta. Por eso, <strong>cuando borras tu cuenta también borramos tus eventos</strong>, no solo tus datos.</p>
+
   <ul>
     <li><strong>Sentry:</strong> recibe informes automáticos cuando la app falla (modelo de dispositivo, versión de sistema operativo y el punto exacto del error). No incluye tus datos de hábitos, entrenos o nutrición.</li>
-    <li><strong>PostHog:</strong> registra de forma anónima qué pantallas y funciones se usan (por ejemplo, "se creó un hábito" o "se generó un plan de gimnasio"), para saber qué mejorar. No se usa para identificarte personalmente.</li>
+    <li><strong>PostHog:</strong> es quien recibe la analítica de uso descrita arriba, y solo si nos has dado permiso.</li>
   </ul>
+
+  <p class="note">Esta lista no está escrita de memoria: sale del registro de eventos del propio código de la app, y hay una prueba automática que impide añadir una medición sin declararla también aquí. Última revisión: 17 de julio de 2026.</p>
 
   <h2>7. Con quién se comparten (encargados del tratamiento)</h2>
   <p>No vendemos tus datos. Los compartimos únicamente con los proveedores que hacen funcionar el servicio, y solo en la medida necesaria:</p>
@@ -102,7 +125,7 @@
     <tr><td>Supabase</td><td>Autenticación, base de datos, copia en la nube y funciones sociales</td><td>Sídney, Australia</td></tr>
     <tr><td>Anthropic (Claude)</td><td>Generar los planes con IA</td><td>EE. UU.</td></tr>
     <tr><td>Sentry</td><td>Informes de errores</td><td>UE / EE. UU.</td></tr>
-    <tr><td>PostHog</td><td>Analítica de uso anónima</td><td>UE / EE. UU.</td></tr>
+    <tr><td>PostHog</td><td>Analítica de uso, solo si das permiso</td><td>EE. UU.</td></tr>
     <tr><td>Apple / Google</td><td>Inicio de sesión (si eliges esa opción)</td><td>Según el proveedor</td></tr>
   </table>
 

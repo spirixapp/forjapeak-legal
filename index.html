@@ -39,6 +39,10 @@
   p, li { color: #D6D6D6; font-size: 15px; }
   a { color: #E06C00; }
   ul { padding-left: 20px; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #333; vertical-align: top; }
+  th { color: #FFFFFF; }
+  td { color: #C7C7C7; }
   .note {
     background: #262626;
     border-left: 3px solid #E06C00;
@@ -53,55 +57,86 @@
 <body>
 <main>
   <h1>Política de Privacidad de ForjaPeak</h1>
-  <p class="updated">Última actualización: 7 de julio de 2026</p>
+  <p class="updated">Última actualización: 17 de julio de 2026</p>
 
-  <p>ForjaPeak es una aplicación de hábitos, entrenamiento y nutrición operada desde Australia. Esta política explica qué información maneja la app y cómo la tratamos.</p>
+  <p>ForjaPeak es una aplicación de hábitos, entrenamiento y nutrición operada desde Australia. Esta política explica qué datos trata la app, con qué fin, con quién se comparten y qué derechos tienes sobre ellos. Se aplica tanto la normativa australiana de privacidad (<em>Privacy Act 1988</em> y los <em>Australian Privacy Principles</em>) como, para las personas usuarias en la Unión Europea y el Espacio Económico Europeo, el Reglamento General de Protección de Datos (RGPD).</p>
 
-  <h2>1. Resumen: la app funciona sin servidor propio</h2>
-  <p>ForjaPeak no requiere crear una cuenta ni iniciar sesión. Todos tus datos —hábitos, planes de entrenamiento, plan nutricional, medidas de progreso, fotos y vídeos que adjuntes— se guardan únicamente en tu dispositivo. No operamos una base de datos propia con tu información personal.</p>
+  <h2>1. Responsable del tratamiento</h2>
+  <p>El responsable de tratar tus datos es <strong>ForjaPeak</strong>, un producto operado desde Australia. Para cualquier asunto relacionado con privacidad puedes escribir a <a href="mailto:jminguezofficial@gmail.com">jminguezofficial@gmail.com</a>.</p>
 
-  <h2>2. Permisos que pide la app</h2>
+  <h2>2. Cómo funciona la app: primero local, la nube es opcional</h2>
+  <p>Puedes usar ForjaPeak <strong>sin crear una cuenta</strong>. En ese caso, todos tus datos (hábitos, planes de entrenamiento, plan nutricional, medidas de progreso, y las fotos o vídeos que adjuntes) se guardan <strong>únicamente en tu dispositivo</strong>.</p>
+  <p>Si decides <strong>iniciar sesión</strong> con Apple o Google, se activan dos funciones que sí usan nuestros servidores: la <strong>copia de seguridad en la nube</strong> (para no perder tu progreso y poder restaurarlo en otro móvil) y las <strong>funciones sociales</strong> (perfil, amigos y retos). Iniciar sesión es opcional y tú decides cuándo hacerlo.</p>
+
+  <h2>3. Qué datos tratamos y dónde se guardan</h2>
+  <p><strong>Siempre en tu dispositivo (no salen de él):</strong> tus hábitos, planes, progreso y, en particular, las <strong>fotos y vídeos</strong> de progreso o entrenamiento. Estos archivos multimedia <strong>nunca se suben a nuestros servidores</strong>; permanecen en tu teléfono.</p>
+  <p><strong>Solo si inicias sesión</strong>, se tratan en la nube los siguientes datos, alojados en la infraestructura de <strong>Supabase, en su región de Sídney (Australia)</strong>:</p>
   <ul>
-    <li><strong>Galería de fotos y vídeos:</strong> para que adjuntes fotos de progreso o vídeos de tus sesiones de entrenamiento, surf o running. Los archivos que elijas se guardan localmente junto al resto de tus datos.</li>
+    <li><strong>Cuenta:</strong> tu identificador de usuario y el correo asociado al proveedor con el que inicias sesión (Apple o Google).</li>
+    <li><strong>Perfil social:</strong> nombre de usuario, nombre para mostrar, emoji de avatar y biografía, si los rellenas.</li>
+    <li><strong>Copia de seguridad:</strong> una copia de tus hábitos, registros, sesiones y planes de entrenamiento y nutrición, para poder restaurarlos. <strong>No</strong> incluye tus fotos ni vídeos.</li>
+    <li><strong>Funciones sociales:</strong> tus relaciones de amistad y participación en retos, si usas esas funciones.</li>
+  </ul>
+
+  <h2>4. Permisos que pide la app</h2>
+  <ul>
+    <li><strong>Galería de fotos y vídeos:</strong> para que adjuntes fotos de progreso o vídeos de tus sesiones. Los archivos que elijas se guardan localmente en tu dispositivo.</li>
     <li><strong>Cámara:</strong> para que puedas hacerte una foto de progreso directamente desde la app, si lo prefieres a elegirla de tu galería.</li>
   </ul>
   <p>En ningún caso accedemos a tu galería o cámara sin que tú inicies la acción explícitamente dentro de la app.</p>
 
-  <h2>3. Generación de planes con inteligencia artificial</h2>
-  <p>Si activas la generación de planes de entrenamiento o nutrición con IA, la app envía la información que proporcionas en el onboarding (objetivo, nivel, preferencias, perfil físico) a la API de Anthropic (Claude) usando la clave que tú mismo introduces en Ajustes. Ese envío está sujeto a la <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">política de privacidad de Anthropic</a>. No compartimos esta información con nadie más.</p>
+  <h2>5. Generación de planes con inteligencia artificial</h2>
+  <p>Si usas la generación de planes de entrenamiento o nutrición con IA, la app envía la información de tu onboarding (objetivo, nivel, preferencias y perfil físico) a través de <strong>nuestro propio servidor</strong> a la API de Anthropic (Claude), que es quien genera el plan. La clave de acceso a esa API es nuestra; tú no tienes que aportar ninguna. Ese tratamiento está sujeto además a la <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">política de privacidad de Anthropic</a>. No enviamos a la IA tus fotos, vídeos ni datos de contacto, y aplicamos un límite de uso por persona y día.</p>
 
-  <h2>4. Datos técnicos y de uso (analítica y errores)</h2>
-  <p>Para poder detectar fallos y entender qué funciones se usan de verdad, ForjaPeak utiliza:</p>
+  <h2>6. Datos técnicos y de uso (errores y analítica)</h2>
+  <p>Para detectar fallos y entender qué funciones se usan de verdad, ForjaPeak utiliza:</p>
   <ul>
-    <li><strong>Sentry:</strong> recibe informes automáticos cuando la app falla (modelo de dispositivo, versión de sistema operativo, y el punto exacto del error). No incluye tus datos personales de hábitos, entrenos o nutrición.</li>
+    <li><strong>Sentry:</strong> recibe informes automáticos cuando la app falla (modelo de dispositivo, versión de sistema operativo y el punto exacto del error). No incluye tus datos de hábitos, entrenos o nutrición.</li>
     <li><strong>PostHog:</strong> registra de forma anónima qué pantallas y funciones se usan (por ejemplo, "se creó un hábito" o "se generó un plan de gimnasio"), para saber qué mejorar. No se usa para identificarte personalmente.</li>
   </ul>
 
-  <h2>5. Qué no hacemos</h2>
+  <h2>7. Con quién se comparten (encargados del tratamiento)</h2>
+  <p>No vendemos tus datos. Los compartimos únicamente con los proveedores que hacen funcionar el servicio, y solo en la medida necesaria:</p>
+  <table>
+    <tr><th>Proveedor</th><th>Para qué</th><th>Dónde</th></tr>
+    <tr><td>Supabase</td><td>Autenticación, base de datos, copia en la nube y funciones sociales</td><td>Sídney, Australia</td></tr>
+    <tr><td>Anthropic (Claude)</td><td>Generar los planes con IA</td><td>EE. UU.</td></tr>
+    <tr><td>Sentry</td><td>Informes de errores</td><td>UE / EE. UU.</td></tr>
+    <tr><td>PostHog</td><td>Analítica de uso anónima</td><td>UE / EE. UU.</td></tr>
+    <tr><td>Apple / Google</td><td>Inicio de sesión (si eliges esa opción)</td><td>Según el proveedor</td></tr>
+  </table>
+
+  <h2>8. Transferencias internacionales</h2>
+  <p>Nuestra base de datos principal está en Australia. Si te encuentras en la Unión Europea, ten en cuenta que tus datos se tratan fuera del Espacio Económico Europeo (en Australia y, para funciones concretas, en EE. UU.). Realizamos esas transferencias cuando son necesarias para prestarte el servicio que solicitas y aplicando las garantías razonables disponibles con cada proveedor.</p>
+
+  <h2>9. Qué no hacemos</h2>
   <ul>
     <li>No vendemos ni alquilamos tu información a terceros.</li>
     <li>No mostramos anuncios de terceros dentro de la app.</li>
-    <li>No accedemos a tus contactos, ubicación ni otras apps.</li>
+    <li>No accedemos a tus contactos ni a tu ubicación.</li>
   </ul>
 
-  <h2>6. Cuánto tiempo se conservan los datos</h2>
-  <p>Tus datos permanecen en tu dispositivo mientras uses la app. Puedes borrar hábitos, sesiones o tu perfil individualmente desde dentro de la app, o eliminar toda la información desinstalando ForjaPeak.</p>
+  <h2>10. Cuánto tiempo se conservan los datos</h2>
+  <p>Los datos que están solo en tu dispositivo permanecen mientras tengas la app instalada; al desinstalarla, desaparecen. Los datos en la nube se conservan mientras mantengas la cuenta. Si eliminas tu cuenta, se borran de nuestros servidores (ver el apartado siguiente).</p>
 
-  <h2>7. Menores de edad</h2>
+  <h2>11. Tus derechos</h2>
+  <p>Tanto los <em>Australian Privacy Principles</em> como el RGPD te reconocen derechos sobre tus datos. Puedes:</p>
+  <ul>
+    <li><strong>Acceder</strong> a los datos que tenemos sobre ti y solicitar una copia.</li>
+    <li><strong>Rectificar</strong> los que sean inexactos (por ejemplo, editando tu perfil en la app).</li>
+    <li><strong>Suprimir</strong> tu cuenta y los datos asociados: desde la propia app, en <em>Ajustes → Eliminar cuenta</em>, que borra tu información de nuestros servidores. También puedes solicitarlo por correo.</li>
+    <li><strong>Portar</strong> tus datos y <strong>oponerte</strong> o limitar ciertos tratamientos.</li>
+  </ul>
+  <p>Para ejercer cualquiera de estos derechos, escribe a <a href="mailto:jminguezofficial@gmail.com">jminguezofficial@gmail.com</a>. Si consideras que no hemos atendido bien tu solicitud, puedes reclamar ante la autoridad de control competente: en Australia, la <a href="https://www.oaic.gov.au/" target="_blank" rel="noopener">OAIC</a>; en España, la <a href="https://www.aepd.es/" target="_blank" rel="noopener">AEPD</a>, o la autoridad de tu país en la UE.</p>
+
+  <h2>12. Menores de edad</h2>
   <p>ForjaPeak no está dirigida a menores de 16 años y no recogemos intencionadamente información de menores.</p>
 
-  <h2>8. Tus derechos</h2>
-  <p>Como no mantenemos una cuenta de usuario ni una base de datos central, la mayoría de tus datos ya están bajo tu control directo en el dispositivo. Si tienes cualquier duda sobre esta política o sobre cómo se procesan los datos técnicos (Sentry/PostHog), puedes escribirnos a <a href="mailto:jminguezofficial@gmail.com">jminguezofficial@gmail.com</a>.</p>
+  <h2>13. Cambios en esta política</h2>
+  <p>Si esta política cambia de forma relevante, actualizaremos esta página y la fecha de "última actualización" del principio.</p>
 
-  <h2>9. Cambios en esta política</h2>
-  <p>Si esta política cambia de forma relevante (por ejemplo, al añadir funciones sociales con backend propio), actualizaremos esta página y la fecha de "última actualización" al principio.</p>
-
-  <h2>10. Contacto</h2>
-  <p>ForjaPeak es un producto operado desde Australia. Para cualquier consulta sobre privacidad, escribe a <a href="mailto:jminguezofficial@gmail.com">jminguezofficial@gmail.com</a>. Ver también nuestros <a href="./terms.html">Términos de Uso</a>.</p>
-
-  <div class="note">
-    Nota: este documento es un borrador funcional pensado para cumplir los requisitos de App Store Connect / Google Play al lanzamiento. Antes de operar a gran escala, especialmente si vas a tener usuarios en la UE (GDPR) o a facturar de forma significativa en Australia (Privacy Act / APP), es recomendable que lo revise un profesional legal.
-  </div>
+  <h2>14. Contacto</h2>
+  <p>Para cualquier consulta sobre privacidad, escribe a <a href="mailto:jminguezofficial@gmail.com">jminguezofficial@gmail.com</a>. Ver también nuestros <a href="./terms.html">Términos de Uso</a>.</p>
 </main>
 </body>
 </html>
